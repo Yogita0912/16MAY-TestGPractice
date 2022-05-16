@@ -84,6 +84,21 @@ public class AllinOne
 					System.out.println("Naukri Out");
 		
   }
+	  @Test
+  public void indeedjobsearch() throws InterruptedException 
+  {
+		System.out.println("Indeed IN");
+		driver.get("https://in.indeed.com/");
+		Thread.sleep(2000);
+		System.out.println("Indeed Job Search");
+		driver.findElement(By.id("text-input-what")).sendKeys("QA Automation Engineer");
+		Thread.sleep(2000);
+		driver.findElement(By.id("text-input-where")).sendKeys("Pune");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Thread.sleep(2000);
+		System.out.println("Indeed Out");
+  }
   
   
   @AfterMethod
